@@ -4,12 +4,23 @@ title: Hi there!
 ---
 
 <picture>
-  <source srcset="/images/photo/1200.avif" type="image/avif" />
-  <source srcset="/images/photo/1200.webp" type="image/webp" />
+  <source 
+    srcset="/images/photo/600.avif 600w, /images/photo/1920.avif 1920w"
+    sizes="(max-width: 1024px) 600px, 1920px"
+    type="image/avif" 
+  />
+  <source 
+    type="image/webp" 
+    srcset="/images/photo/600.webp 600w, /images/photo/1920.webp 1920w"
+    sizes="(max-width: 1024px) 600px, 1920px"
+  />
   <img
-    src="/images/photo/1200.jpg"
+    class="photo"
+    src="/images/photo/600.jpg"
+    srcset="/images/photo/600.jpg 600w, /images/photo/1920.jpg 1920w"
+    sizes="(max-width: 1024px) 600px, 1920px"
     alt="Author Portrait"
-    width="600"
+    fetchpriority="high"
   />
 </picture>
 
