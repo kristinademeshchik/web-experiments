@@ -2,6 +2,15 @@ main {
   max-width: 100%;
 }
 
+.intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
 .photo {
   max-width: 100%;
+}
+.details__header {
+  margin-top: 0;
 }

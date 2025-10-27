@@ -3,26 +3,28 @@ layout: layout.html
 title: Hi there!
 ---
 
-<picture>
-  <source 
-    srcset="/images/photo/600.avif 600w, /images/photo/1920.avif 1920w"
-    sizes="(max-width: 1024px) 600px, 1920px"
-    type="image/avif" 
-  />
-  <source 
-    type="image/webp" 
-    srcset="/images/photo/600.webp 600w, /images/photo/1920.webp 1920w"
-    sizes="(max-width: 1024px) 600px, 1920px"
-  />
-  <img
-    class="photo"
-    src="/images/photo/600.jpg"
-    srcset="/images/photo/600.jpg 600w, /images/photo/1920.jpg 1920w"
-    sizes="(max-width: 1024px) 600px, 1920px"
-    alt="Author Portrait"
-    fetchpriority="high"
-  />
-</picture>
+<section class="intro">
+  <picture class="intro__photo">
+    <source 
+      srcset="/images/photo/1920.avif 1920w,/images/photo/600.avif 640w" 
+      sizes="(min-width: 1760px) 616px,(min-width: 1024px) calc(75vw - 20px - 2 * 42px),calc(100vw - 2 * 20px)" 
+      type="image/avif"
+    >
+    <source 
+      srcset="/images/photo/1920.webp 1920w,/images/photo/600.webp 640w" 
+      sizes="(min-width: 1760px) 616px,(min-width: 1024px) calc(75vw - 20px - 2 * 42px),calc(100vw - 2 * 20px)" 
+      type="image/webp"
+    >
+    <img
+      class="photo"
+      src="/images/photo/1920.jpg"
+      alt="Portrait of Kristina Demeshchik"
+      fetchpriority="high"
+    />
+  </picture>
 
-<h2>My name is Kristina Demeshchik!</h2>
-<p>I'm a frontend developer and this is the page where I am experimenting with new web features.</p>
+  <div class="intro__details details">
+    <h1 class="details__header">Welcome to my web experiments page!</h1>
+    <p>Here, I explore and test new web technologies and features.</p>
+  </div>
+</section>
