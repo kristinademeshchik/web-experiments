@@ -3,11 +3,15 @@
   /* todo: figure out the fonts */
   --font-family-text: -apple-system, sans-serif; 
   --font-size-normal: 1rem;
+  /* figure out color system */
+  --color-text-primary: #484040;
 }
 
 body {
   font-family: var(--font-family-text);
   font-size: var(--font-size-normal);
+  color: var(--color-text-primary);
+  min-width: 375px;
 }
 
 main {
@@ -25,6 +29,12 @@ main {
   padding-inline: 40px;
 }
 
+@media (max-width: 480px) {
+  .footer {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (min-width: 1760px) {
   main, .footer {
     padding-inline: calc(56% - 838px);
@@ -33,7 +43,7 @@ main {
 
 .intro {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 20px;
 }
 
@@ -44,6 +54,7 @@ main {
 }
 
 .photo {
+  width: 100%;
   max-width: 100%;
   border-radius: 10px;
 }
@@ -56,6 +67,10 @@ main {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.footer-list__item {
+  padding: 5px 0;
 }
 
 .footer__header {
