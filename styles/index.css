@@ -1,5 +1,10 @@
+:root {
+  --color-border: #e0e0e0;
+}
+
 main {
   max-width: 100%;
+  padding: 50px 0;
 }
 
 .intro {
@@ -20,4 +25,22 @@ main {
 
 .details__header {
   margin-top: 0;
+}
+
+.footer {
+  border-top: 1px solid var(--color-border);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 50px 0;
+}
+
+.footer-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer__header {
+  margin: 0;
 }
