@@ -21,8 +21,7 @@ a {
 }
 
 a:hover {
-  background-color: oklch(from var(--accent) calc(l + 0.05) c h);
-  border-radius: 3px;
+  color: oklch(from var(--color-text-primary) calc(l - 0.1) c h);
 }
 
 main {
@@ -81,10 +80,7 @@ main {
 }
 
 .footer-list__item {
-  a {
-    display: inline-block;
-    padding: 8px;
-  }
+  padding: 5px 0;
 }
 
 .footer__header {
