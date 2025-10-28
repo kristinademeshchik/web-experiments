@@ -1,10 +1,11 @@
 :root {
-  --color-border: #e0e0e0;
   /* todo: figure out the fonts */
   --font-family-text: -apple-system, sans-serif; 
   --font-size-normal: 1rem;
-  /* figure out color system */
-  --color-text-primary: #484040;
+  
+  --accent: oklch(0.89 0.07 74);
+  --color-border: oklch(0.9 0 0);
+  --color-text-primary: oklch(0.4 0 17);
 }
 
 body {
@@ -12,6 +13,16 @@ body {
   font-size: var(--font-size-normal);
   color: var(--color-text-primary);
   min-width: 375px;
+  margin: 0;
+}
+
+a {
+  color: oklch(from var(--color-text-primary) calc(l + 0.1) c h);
+}
+
+a:hover {
+  background-color: oklch(from var(--accent) calc(l + 0.05) c h);
+  border-radius: 3px;
 }
 
 main {
@@ -70,9 +81,19 @@ main {
 }
 
 .footer-list__item {
-  padding: 5px 0;
+  a {
+    display: inline-block;
+    padding: 8px;
+  }
 }
 
 .footer__header {
   margin: 0 0 10px 0;
+}
+
+.greeting {
+  background-color: var(--accent);
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 5px;
 }
