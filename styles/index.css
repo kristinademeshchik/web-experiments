@@ -1,14 +1,13 @@
 :root {
+  color-scheme: light dark;
+
   /* todo: figure out the fonts */
   --font-family-text: -apple-system, sans-serif; 
   --font-size-normal: 1rem;
-  
-  --accent: oklch(0.89 0.07 74);
-  --color-border: oklch(0.9 0 0);
-  --color-text-primary: oklch(0.4 0 17);
 }
 
 body {
+  background: var(--color-background);
   font-family: var(--font-family-text);
   font-size: var(--font-size-normal);
   color: var(--color-text-primary);
@@ -88,7 +87,8 @@ main {
 }
 
 .greeting {
-  background-color: var(--accent);
+  background-color: var(--accent-color);
+  color: var(--accent-text);
   display: inline-block;
   padding: 10px 15px;
   border-radius: 5px;

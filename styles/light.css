@@ -1,0 +1,8 @@
+:root {
+  --color-background: oklch(100% 0.00011 271.152);
+  --color-text-primary: oklch(0.4 0 17);
+  --color-border: oklch(0.9 0 0);
+  --accent-color: oklch(0.89 0.07 74);
+  --accent-text: var(--color-text-primary);
+  color-scheme: light;
+}
